@@ -22,6 +22,7 @@ Plus Scripting is super fun xD.
 
 Made by @Mytx.
 
+
 ✨ Features
 * Add new topics to a card
 
@@ -34,7 +35,9 @@ Made by @Mytx.
 * Lightweight and fast (no dependencies except bash and optionally bat)
 
 
+
 📦 Installation
+
 Just clone the repo and run:
 
 bash flashcard_register.sh
@@ -44,6 +47,7 @@ Note: You need to set your flashcards directory in the script ($dir variable).
 
 Optional: Install bat for better text file viewing.
 Otherwise, fallback to cat inside the script.
+
 
 
 🛠️ Usage
