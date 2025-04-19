@@ -1,9 +1,9 @@
-📚 Flashcard Register
+## 📚 Flashcard Register
 
 A light-weight terminal-based tool to quickly register, remove, sort, and search your flashcard topics.
 Built to make learning (and forgetting less) a little bit easier.
 
-DEMO
+## DEMO
 
 ![Demo Screenshot](assets/2025-04-19-141436_hyprshot.png)
 ![Demo Screenshot](assets/2025-04-19-140707_hyprshot.png)
@@ -23,7 +23,7 @@ Plus Scripting is super fun xD.
 Made by @Mytx.
 
 
-✨ Features
+## ✨ Features
 * Add new topics to a card
 
 * Remove a topic by line number
@@ -36,7 +36,7 @@ Made by @Mytx.
 
 
 
-📦 Installation
+## 📦 Installation
 
 Just clone the repo and run:
 
@@ -50,7 +50,7 @@ Otherwise, fallback to cat inside the script.
 
 
 
-🛠️ Usage
+## 🛠️ Usage
 Select a card (e.g., Java, Python, etc.)
 
 Enter a new topic by just typing it
