@@ -34,7 +34,7 @@ Made by @Mytx.
 * Lightweight and fast (no dependencies except bash and optionally bat)
 
 
-  📦 Installation
+📦 Installation
 Just clone the repo and run:
 
 bash flashcard_register.sh
