@@ -3,6 +3,11 @@
 A light-weight terminal-based tool to quickly register, remove, sort, and search your flashcard topics.
 Built to make learning (and forgetting less) a little bit easier.
 
+DEMO
+
+![Demo Screenshot](assets/2025-04-19-141436_hyprshot.png)
+![Demo Screenshot](assets/2025-04-19-140707_hyprshot.png)
+
 Like everyone else, I tend to forget what I read if I don't use it often.
 Traditional note-taking didn't work for me because I rarely reviewed my notes.
 
@@ -13,7 +18,9 @@ This tiny tool was my solution.
 It's small, simple — but it fits right into my workflow and actually helps me stay consistent.
 
 Built with a bit of boredom, a lot of curiosity, and no unnecessary overhead.
-Made by @Mytx. Plus Scripting is super fun xD.
+Plus Scripting is super fun xD.
+
+Made by @Mytx.
 
 ✨ Features
 * Add new topics to a card
