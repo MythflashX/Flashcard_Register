@@ -90,7 +90,8 @@ while [ true ]; do
       echo "Please provide a search term! [search term]"
     fi
   else
-    echo "$prompt" >> $dir/"${selected_card}.txt"
+    echo -n "$prompt" >> $dir/"${selected_card}.txt"
+    echo " $arg" >> $dir/"${selected_card}.txt"
   fi
 done
 
