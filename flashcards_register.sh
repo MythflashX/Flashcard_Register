@@ -12,13 +12,13 @@ echo " - op[T]ions -"
 
 # Configuration
 dir="/home/mytx/onyx_saves/flashcards";
-cards=("java" "python" "C++" "crafting_interpreters")
+cards=("java" "python" "c++" "crafting_interpreters")
 keys=("j" "p" "cpp" "craft")
 
 # Option Menu
 echo ""
-echo "s:show | q:quit | r ?:remove a line | help: Quick Guide"
-echo "sort:sorted view | search ?:search words | clr:clear screen"
+echo "s:show | q:quit | r ?:remove a line | vim: edit the card with text editor"
+echo "sort:sorted view | search ?:search words | help: peek instructions"
 echo ""
 echo ""
 
@@ -60,6 +60,7 @@ while [ true ]; do
     echo "  s  : Show the flashcard contents"
     echo "  q  : Quit the program"
     echo "  r ?: Remove a line by providing a line number"
+    echo "  vim  : Edit the card with text editor"
     echo "  clr  : Clear terminal screen"
     echo "  sort : View the flashcards in sorted order Or Sort it"
     echo "  search ?: Search for a word in the flashcard"
@@ -69,6 +70,8 @@ while [ true ]; do
   elif [ "$prompt" == "s" ]; then
     bat "$dir"/"${selected_card}.txt"     # I know i said no dependency but please install bat or else you can use cat..but bat is objectively better
     #cat $dir/"${selected_card}.txt"    # use this line if u don't like or have bat
+  elif [ "$prompt" == "vim" ]; then
+    vim "$dir"/"${selected_card}.txt"  
   elif [ "$prompt" == "r" ]; then
     if [ -n "$arg" ]; then
       sed -i "${arg}d" "$dir"/"${selected_card}.txt"
