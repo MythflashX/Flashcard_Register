@@ -12,8 +12,8 @@ echo " - op[T]ions -"
 
 # Configuration
 dir="/home/mytx/onyx_saves/flashcards";
-cards=("java" "python" "c++" "crafting_interpreters")
-keys=("j" "p" "cpp" "craft")
+cards=("java" "python" "c++" "crafting_interpreters" "capture_the_flag")
+keys=("j" "p" "cpp" "craft" "ctf")
 
 # Option Menu
 echo ""
@@ -22,10 +22,15 @@ echo "sort:sorted view | search ?:search words | help: peek instructions"
 echo ""
 echo ""
 
+echo " - ca[R]ds - "
+echo ""
 size=${#cards[@]}
 for ((i=0; i<size; i++))
 do
   echo -n ${keys[i]}':['${cards[i]}"] "
+  if (( i % 2 != 0)); then
+    echo ""
+  fi
 done
 echo ""
 echo ""
@@ -71,7 +76,7 @@ while [ true ]; do
     bat "$dir"/"${selected_card}.txt"     # I know i said no dependency but please install bat or else you can use cat..but bat is objectively better
     #cat $dir/"${selected_card}.txt"    # use this line if u don't like or have bat
   elif [ "$prompt" == "vim" ]; then
-    vim "$dir"/"${selected_card}.txt"  
+    vim "$dir"/"${selected_card}.txt"     # I know i said no dependency but please install bat or else you can use cat..but bat is objectively better
   elif [ "$prompt" == "r" ]; then
     if [ -n "$arg" ]; then
       sed -i "${arg}d" "$dir"/"${selected_card}.txt"
