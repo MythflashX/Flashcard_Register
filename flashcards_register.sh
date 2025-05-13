@@ -17,8 +17,11 @@ keys=("j" "p" "cpp" "craft" "ctf")
 
 # Option Menu
 echo ""
-echo "s:show | q:quit | r ?:remove a line | vim: edit the card with text editor"
-echo "sort:sorted view | search ?:search words | help: peek instructions"
+echo "s:show | q:quit | r ?:remove a line | vim: edit with text editor"
+echo "search ?:search words | nocase ?:search words (case insensitive)"
+echo "search_all ?:search words on every cards"
+echo "sort:sorted view | sync: update the cards on github"
+echo "help: peek instructions"
 echo ""
 echo ""
 
@@ -69,7 +72,11 @@ while [ true ]; do
     echo "  clr  : Clear terminal screen"
     echo "  sort : View the flashcards in sorted order Or Sort it"
     echo "  search ?: Search for a word in the flashcard"
+    echo "  nocase ?: Search for a word in the flashcard (Case Insensitive)"
+    echo "  search_all ?: Search for a word in every flashcards"
     echo "  Once card is selected, Just Enter Topics to register"
+  elif [ "$prompt" == "sync" ]; then
+    echo "Working On It!"
   elif [ "$prompt" == "clr" ]; then
     clear
   elif [ "$prompt" == "s" ]; then
@@ -96,6 +103,18 @@ while [ true ]; do
       grep "$arg" "$dir"/"${selected_card}.txt"
     else
       echo "Please provide a search term! [search term]"
+    fi
+  elif [ "$prompt" == "nocase" ]; then
+    if [ -n "$arg" ]; then
+      cat "$dir"/"${selected_card}.txt" | tr 'A-Z' 'a-z' | grep "$(echo "$arg" | tr 'A-Z' 'a-z')"
+    else
+      echo "Please provide a search term! [nocase term]"
+    fi
+  elif [ "$prompt" == "search_all" ]; then
+    if [ -n "$arg" ]; then
+      cat "$dir"/*.txt | tr 'A-Z' 'a-z' | grep "$(echo "$arg" | tr 'A-Z' 'a-z')"
+    else
+      echo "Please provide a search term! [search_all term]"
     fi
   else
     echo -n "$prompt" >> $dir/"${selected_card}.txt"
